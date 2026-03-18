@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriEcosystem — UI/UX Case Study</title>
+    <meta name="description"
+        content="A comprehensive UI/UX case study for a smart agriculture IoT platform combining real-time sensor data, AI diagnostics, and mobile-first design.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+
+<body>
+
+    <!-- Main Viewport -->
+    <div class="viewport">
+
+        <!-- Floating Shell -->
+        <div class="shell">
+
+            <!-- Noise Texture Overlay -->
+            <div class="texture-noise"></div>
+
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <div class="nav-inner">
+                    <a href="#" class="nav-logo">
+                        <div class="logo-box">A</div>
+                        <span>AgriEcosystem</span>
+                    </a>
+                    <div class="nav-pill">
+                        <a href="#overview" class="nav-link active">Overview</a>
+                        <a href="#research" class="nav-link">Research</a>
+                        <a href="#design" class="nav-link">Design System</a>
+                        <a href="#solution" class="nav-link">Solution</a>
+                    </div>
+                    <div class="nav-right">
+                        <!-- Theme Toggle Button -->
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode"
+                            title="Switch Theme">
+                            <!-- Moon Icon (Dark Mode active) -->
+                            <svg class="moon-icon" viewBox="0 0 24 24">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            <!-- Sun Icon (Light Mode active) -->
+                            <svg class="sun-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ========================= -->
+            <!-- 1. HERO -->
+            <!-- ========================= -->
+            <section class="hero" id="overview" data-pad="96px 32px 64px">
+                <!-- Ambient Glow Behind Hero -->
+                <div class="glow-sphere hero-glow-1"></div>
+                <div class="glow-sphere hero-glow-2"></div>
+
+                <div class="hero-grid">
+                    <!-- Left: Typography -->
+                    <div class="hero-left">
+                        <div class="status-tag mb-1">
+                            <span class="pulse-dot"></span>
+                            <span>AI-POWERED · IOT · MOBILE APP</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Smart
+                            <br>
+                            <span class="hero-gradient">Agriculture</span>
+                            <br>
+                            Redesigned.
+                        </h1>
+                        <p class="hero-desc">
+                            A product design case study detailing the end-to-end UX of a real-time plant health
+                            monitoring platform.
+                            <strong>This portfolio uses the exact same design system as the app itself.</strong>
+                        </p>
+                        <div class="hero-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Timeline</span>
+                                <span class="meta-value">6 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Role</span>
+                                <span class="meta-value">Product Designer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Platform</span>
+                                <span class="meta-value">iOS & Android</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Floating Mockup -->
+                    <div class="hero-right">
+                        <div class="hero-mockup-shell glass-card">
+                            <img src="assets/hero.webp" alt="AgriEcosystem Platform" class="hero-img">
+                            <!-- Floating Labels -->
+                            <div class="float-label float-label-1 float-anim">
+                                <span class="pulse-dot"></span> ESP32 Online
+                            </div>
+                            <div class="float-label float-label-2 float-anim" style="animation-delay: -2s;">
+                                AI Confidence: 94%
+                            </div>
+                            <div class="float-label float-label-3 accent-label float-anim"
+                                style="animation-delay: -4s;">
+                                🌿 Healthy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 2. PROBLEM DISCOVERY -->
+            <!-- ========================= -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-label">
+                        <span class="status-tag"><span class="pulse-dot"
+                                style="background:#ef4444;box-shadow:0 0 8px #ef4444"></span> THE CHALLENGE</span>
+                    </div>
+                    <h2 class="section-title">
+                        Existing tools are <span class="text-accent">fragmented, reactive, and complex.</span>
+                    </h2>
+
+                    <div class="feature-grid">
+                        <div class="glass-card glass-card-padded" data-pad="40px">
+                            <div class="card-icon">01</div>
+                            <h3>Fragmented Ecosystem</h3>
+                            <p>Farmers juggle separate platforms for weather, soil, and disease detection. No single
+                                source of truth exists for daily operations.</p>
+                        </div>
+                        <div class="glass-card glass-card-padded" data-pad="40px">
+                            <div class="card-icon">02</div>
+                            <h3>Reactive Detection</h3>
+                            <p>Crop diseases are caught after visible damage — when yield loss is already significant
+                                and treatments are less effective.</p>
+                        </div>
+                        <div class="glass-card glass-card-padded" data-pad="40px">
+                            <div class="card-icon">03</div>
+                            <h3>High Setup Friction</h3>
+                            <p>IoT hardware requires IP configs and technical knowledge, alienating the primary user
+                                base of traditional farmers.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card glass-card-padded text-center" style="max-width: 800px; margin: 0 auto;" data-pad="40px">
+                        <span class="status-tag mb-1"><span class="pulse-dot"></span> HOW MIGHT WE</span>
+                        <h3 style="font-size: 1.5rem; line-height: 1.4; color: var(--text-primary); margin:0;">
+                            Create a unified, intuitive ecosystem that bridges the gap between complex IoT sensor data
+                            and actionable daily farming insights?
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 3. PERSONAS -->
+            <!-- ========================= -->
+            <section class="section" id="research">
+                <div class="container">
+                    <div class="section-label"><span class="status-tag"><span class="pulse-dot"></span> USER
+                            RESEARCH</span></div>
+                    <h2 class="section-title">Target User Archetypes</h2>
+
+                    <div class="feature-grid">
+                        <div class="glass-card glass-card-padded" data-pad="40px">
+                            <div class="persona-top">
+                                <img src="assets/persona-farmer.webp" alt="Rajesh K." class="persona-img">
+                                <div>
+                                    <h3>Rajesh K.</h3>
+                                    <span class="status-tag"><span class="pulse-dot"
+                                            style="background:#f59e0b;box-shadow:none"></span> TRADITIONAL FARMER</span>
+                                </div>
+                            </div>
+                            <div class="persona-stats">
+                                <span>Age: 45</span><span>Tech: Moderate</span><span>Region: Rural</span>
+                            </div>
+                            <div class="persona-detail">
+                                <h4>Goals</h4>
+                                <ul>
+                                    <li>Prevent yield loss from sudden diseases</li>
+                                    <li>Understand soil needs without complex lab tests</li>
+                                </ul>
+                            </div>
+                            <div class="persona-detail">
+                                <h4>Pain Points</h4>
+                                <ul>
+                                    <li>Overwhelmed by raw data; needs clear guidance</li>
+                                    <li>Limited and unreliable internet in the fields</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="glass-card glass-card-padded" data-pad="40px">
+                            <div class="persona-top">
+                                <img src="assets/persona-startup.webp" alt="Sarah M." class="persona-img">
+                                <div>
+                                    <h3>Sarah M.</h3>
+                                    <span class="status-tag"><span class="pulse-dot"
+                                            style="background:#10b981;box-shadow:none"></span> GREENHOUSE MANAGER</span>
+                                </div>
+                            </div>
+                            <div class="persona-stats">
+                                <span>Age: 32</span><span>Tech: High</span><span>Region: Urban</span>
+                            </div>
+                            <div class="persona-detail">
+                                <h4>Goals</h4>
+                                <ul>
+                                    <li>Optimize water usage across multiple zones</li>
+                                    <li>Automate data collection for compliance reporting</li>
+                                </ul>
+                            </div>
+                            <div class="persona-detail">
+                                <h4>Pain Points</h4>
+                                <ul>
+                                    <li>Hardware setup takes too much time per zone</li>
+                                    <li>Needs historical trend analysis, not just live feeds</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 4. INFORMATION ARCHITECTURE -->
+            <!-- ========================= -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-label"><span class="status-tag"><span class="pulse-dot"></span>
+                            ARCHITECTURE</span></div>
+                    <h2 class="section-title">Structuring the Flow</h2>
+                    <p style="max-width: 600px; margin-bottom: 2rem;">Moving from a mental model of "reading sensors" to
+                        "taking action." The app is flattened into 5 primary tabs, directly mapping to the user's daily
+                        journey.</p>
+
+                    <div class="glass-card glass-card-padded ia-container" data-pad="40px">
+                        <div class="ia-diagram">
+                            <div class="ia-row">
+                                <div class="ia-node root">AgriEcosystem</div>
+                            </div>
+                            <div style="height: 20px; border-left: 2px solid var(--border-color); margin: 0 auto;">
+                            </div>
+                            <div class="ia-row" style="flex-wrap: wrap;">
+                                <div class="ia-node">Dashboard<br><span
+                                        style="font-size: 10px; color: var(--text-muted)">Live Stats & Risks</span>
+                                </div>
+                                <div class="ia-node">History<br><span
+                                        style="font-size: 10px; color: var(--text-muted)">Trends</span></div>
+                                <div class="ia-node" style="border-color: var(--accent)">Camera<br><span
+                                        style="font-size: 10px; color: var(--text-muted)">AI Diagnosis</span></div>
+                                <div class="ia-node">Encyclopedia<br><span
+                                        style="font-size: 10px; color: var(--text-muted)">Knowledge Base</span></div>
+                                <div class="ia-node">Settings<br><span
+                                        style="font-size: 10px; color: var(--text-muted)">Hardware Auth</span></div>
+                            </div>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">The
+                                "Action" Pivot</h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Instead of burying the AI camera
+                                inside a menu, it sits at the bottom-center of the tab bar. It acts as the primary
+                                action button, acknowledging that <strong>diagnosis is the core value
+                                    proposition.</strong></p>
+
+                            <h3 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">Contextual
+                                Navigation</h3>
+                            <p style="font-size: 0.95rem;">From the Camera scanner, if a disease is found (e.g. <i>Late
+                                    Blight</i>), users are deep-linked directly into the Encyclopedia for immediate
+                                treatment protocols — closing the loop between detection and cure.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 5. DESIGN SYSTEM SHOWCASE -->
+            <!-- ========================= -->
+            <section class="section" id="design">
+                <div class="container">
+                    <div class="section-label"><span class="status-tag"><span class="pulse-dot"></span> TOKENS</span>
+                    </div>
+                    <h2 class="section-title">Botanical Design System</h2>
+                    <p style="max-width: 600px; margin-bottom: 2rem;">A cohesive cross-platform visual language built
+                        directly on NativeWind/Tailwind. <i>Use the sun/moon toggle in the navigation to test the actual
+                            design tokens live on this page.</i></p>
+
+                    <div class="feature-grid tokens-grid">
+                        <!-- Dark Mode Palettes -->
+                        <div class="glass-card glass-card-padded" style="background: #0a0a0a; border-color: #1e3824;" data-pad="40px">
+                            <span class="status-tag mb-1" style="color: #6e9676"><span class="pulse-dot"></span> Dark
+                                Mode (Field Optimized)</span>
+                            <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                                <div
+                                    style="background: #0a0a0a; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #1e3824;">
+                                </div>
+                                <div
+                                    style="background: #122016; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #1e3824;">
+                                </div>
+                                <div
+                                    style="background: #182d1c; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #1e3824;">
+                                </div>
+                                <div
+                                    style="background: #13ec25; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #1e3824;">
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85rem; color: #6e9676; margin-top: 1rem;">Base: #0a0a0a. Surface:
+                                #122016. High-contrast neon green ensures visibility under direct sunlight in the
+                                fields.</p>
+                        </div>
+
+                        <!-- Light Mode Palettes -->
+                        <div class="glass-card glass-card-padded" style="background: #f0f5f0; border-color: #d6e8d6;" data-pad="40px">
+                            <span class="status-tag mb-1" style="color: #567458"><span class="pulse-dot"></span> Light
+                                Mode (Greenhouse Optimized)</span>
+                            <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                                <div
+                                    style="background: #f0f5f0; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #d6e8d6;">
+                                </div>
+                                <div
+                                    style="background: #ffffff; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #d6e8d6;">
+                                </div>
+                                <div
+                                    style="background: #eef4ee; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #d6e8d6;">
+                                </div>
+                                <div
+                                    style="background: #13ec25; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #d6e8d6;">
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85rem; color: #567458; margin-top: 1rem;">Base: #f0f5f0. Surface:
+                                #ffffff. Warm sage tones mimic the natural environment of indoor agriculture.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 6. DESIGN METHODOLOGY (Contrast Section) -->
+            <!-- ========================= -->
+            <section class="contrast-section">
+                <div class="container">
+                    <div class="section-label"><span class="status-tag"><span class="pulse-dot"
+                                style="background: var(--contrast-text);"></span> METHODOLOGY</span></div>
+                    <h2 class="section-title">Human-Centered<br>Design Process</h2>
+
+                    <div class="method-grid">
+                        <div class="method-item">
+                            <div class="method-num">01</div>
+                            <div>
+                                <h3>Empathize</h3>
+                                <p>Conducted 12+ field interviews and contextual inquiries with farmers and greenhouse
+                                    operators across 3 regions.</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-num">02</div>
+                            <div>
+                                <h3>Define</h3>
+                                <p>Synthesized findings into overarching jobs-to-be-done: "I want to know if my plants
+                                    are dying before I can see it with my own eyes."</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-num">03</div>
+                            <div>
+                                <h3>Ideate</h3>
+                                <p>Brainstormed solutions focusing on "Auto-Discovery" for hardware and an
+                                    "Action-First" dashboard architecture instead of raw data tables.</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-num">04</div>
+                            <div>
+                                <h3>Prototype & Test</h3>
+                                <p>Iterated from wireframes to React Native code, testing UI contrast under bright
+                                    sunlight and the intuitiveness of the AI scanner flow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 7. SOLUTION — BENTO GRID -->
+            <!-- ========================= -->
+            <section class="section" id="solution">
+                <div class="container">
+                    <div class="section-label"><span class="status-tag"><span class="pulse-dot"></span> THE
+                            SOLUTION</span></div>
+                    <h2 class="section-title">Key Screen Deliverables</h2>
+
+                    <div class="bento-grid">
+                        <!-- Dashboard (Large) -->
+                        <div class="bento-card bento-large glass-card">
+                            <div class="bento-card-inner">
+                                <img src="assets/screen-dashboard.webp" alt="Dashboard" class="bento-img">
+                            </div>
+                            <div class="bento-label">
+                                <h3 style="font-size: 1.1rem">Action-First Dashboard</h3>
+                                <p style="font-size: 0.9rem">A synthesized Risk Gauge replaces raw data tables.
+                                    Contextual recommendation cards surface only when sensor values deviate from optimal
+                                    ranges.</p>
+                            </div>
+                        </div>
+
+                        <!-- Camera Scanner (Tall) -->
+                        <div class="bento-card bento-tall glass-card">
+                            <div class="bento-card-inner">
+                                <img src="assets/screen-camera.webp" alt="AI Scanner" class="bento-img">
+                            </div>
+                            <div class="bento-label">
+                                <h3 style="font-size: 1.1rem">Explainable AI Diagnostics</h3>
+                                <p style="font-size: 0.9rem">One-tap access to the camera with a targeted bounding box
+                                    and transparent confidence scoring. Reduces the "black box" feeling of AI.</p>
+                            </div>
+                        </div>
+
+                        <!-- Encyclopedia -->
+                        <div class="bento-card glass-card">
+                            <div class="bento-card-inner">
+                                <img src="assets/screen-encyclopedia.webp" alt="Encyclopedia" class="bento-img">
+                            </div>
+                            <div class="bento-label">
+                                <h3 style="font-size: 1.1rem">Knowledge Library</h3>
+                                <p style="font-size: 0.9rem">Searchable botanical disease repository linked directly to
+                                    AI diagnoses with integrated treatment protocols.</p>
+                            </div>
+                        </div>
+
+                        <!-- Hardware / UX detail -->
+                        <div class="bento-card bento-accent">
+                            <div class="texture-noise" style="opacity:0.25;border-radius:inherit"></div>
+                            <div class="bento-accent-content">
+                                <h3>Zero-Config Protocol</h3>
+                                <p>Hardware auto-discovery eliminates IP entry completely. ESP32 sensory nodes appear in
+                                    the app dashboard within 5 seconds of powering on.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 8. OUTCOMES & IMPACT -->
+            <!-- ========================= -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-label"><span class="status-tag"><span class="pulse-dot"></span> IMPACT</span>
+                    </div>
+                    <h2 class="section-title">Measurable Outcomes</h2>
+
+                    <div class="outcomes-grid">
+                        <div class="glass-card outcome-card" data-pad="40px">
+                            <h3 class="outcome-value">0 IP</h3>
+                            <span class="status-tag" style="justify-content: center; margin: 0.5rem 0;">Hardware
+                                Setup</span>
+                            <p style="font-size: 0.9rem">Auto-discovery protocol eliminated manual IP tracking.</p>
+                        </div>
+                        <div class="glass-card outcome-card" data-pad="40px">
+                            <h3 class="outcome-value">&lt; 2s</h3>
+                            <span class="status-tag" style="justify-content: center; margin: 0.5rem 0;">Time to
+                                Action</span>
+                            <p style="font-size: 0.9rem">Status prioritized via glanceable Risk gauge hierarchy.</p>
+                        </div>
+                        <div class="glass-card outcome-card" data-pad="40px">
+                            <h3 class="outcome-value">94%</h3>
+                            <span class="status-tag" style="justify-content: center; margin: 0.5rem 0;">Diagnostic
+                                Acc.</span>
+                            <p style="font-size: 0.9rem">User trust established via transparent AI confidence scores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- 9. FOOTER -->
+            <!-- ========================= -->
+            <footer class="footer">
+                <div class="footer-watermark">AGRI</div>
+                <div class="container" style="position: relative; z-index: 1;">
+                    <div class="footer-cta">
+                        <h2>Let's build something<br><span class="text-accent">extraordinary.</span></h2>
+                        <a href="#overview" class="neon-btn">
+                            <span>Back to Top ↑</span>
+                        </a>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-col">
+                            <span class="footer-heading">Project Structure</span>
+                            <a href="#overview">Overview</a>
+                            <a href="#design">Design tokens</a>
+                            <a href="#solution">Final Solution</a>
+                        </div>
+                        <div class="footer-col">
+                            <span class="footer-heading">Tech Stack</span>
+                            <span>React Native · Expo</span>
+                            <span>FastAPI · Python</span>
+                            <span>ESP32 · MQTT</span>
+                        </div>
+                        <div class="footer-col" style="text-align: right;">
+                            <span class="status-tag" style="justify-content: flex-end; margin-bottom: 0.5rem;"><span
+                                    class="pulse-dot"></span> PORTFOLIO 2026</span>
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Piyush Kumar Mahato
+                                <br>Product Designer
+                                <br>piyushkrmahatoo@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div><!-- End Shell -->
+    </div><!-- End Viewport -->
+
+    <script src="main.js"></script>
+</body>
+
+</html>
