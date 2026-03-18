@@ -939,6 +939,35 @@ li {
 
 
 /* ===========================
+   15.5. Social Links
+   =========================== */
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: flex-end;
+    margin-top: 1.25rem;
+}
+
+.social-icon {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
+}
+
+.social-icon:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* ===========================
    16. Reveal Animation
    =========================== */
 .reveal {
